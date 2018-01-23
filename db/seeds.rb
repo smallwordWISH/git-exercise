@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+
+10.times do |n|
+  User.create!( name: "user_" + n.to_s )
+end
+
+User.first.update(role: "admin")
+
+puts "successfully created #{User.count} users"
+puts "user_1 is admin"
