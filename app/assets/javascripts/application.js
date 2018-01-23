@@ -13,3 +13,23 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require bootstrap-sprockets
+
+var time=7;
+
+function countDown(time){
+
+  setInterval(function(){
+    time--;
+
+
+    if (time ==0) {
+      document.getElementById("ghost").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXHMjxvFq4iaHpef3l-_vaKYL3CP2PSN6dSX9qnnOsEtpoovZa";
+      document.getElementById("ghost").style.width = "100%"
+    } else if (time <= -2) {
+      document.getElementById("ghost").style.display = "none";
+    }
+  },1000)
+}
+countDown(time);

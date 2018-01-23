@@ -1,0 +1,12 @@
+<div class="container" >
+  <img id="ghost">
+
+    <h4>name:<%= @user.name %></h4>
+      
+      <% if @user.is_admin? %>
+        <h4>role: Admin</h4>
+      <% else %>
+        <h4>role: 路人</h4>
+      <% end %>
+
+</div>
