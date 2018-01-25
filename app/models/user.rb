@@ -1,5 +1,5 @@
 class User < ApplicationRecord
   def is_admin?
-    user.id == 1
+    self.role == "admin"
   end
 end
